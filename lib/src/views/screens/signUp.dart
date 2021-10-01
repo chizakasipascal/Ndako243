@@ -4,8 +4,20 @@ import 'package:ndako243/src/utils/colors.dart';
 import 'package:ndako243/src/views/compotments/compotements.dart';
 import 'package:ndako243/src/views/compotments/textbox/textbox.dart';
 
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  bool isNumber = false;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +57,12 @@ class SignUp extends StatelessWidget {
                             color: BlackColor,
                             fontWeight: FontWeight.bold),
                         children: <TextSpan>[
-                          TextSpan(text: "Sign up with\n"),
                           TextSpan(
-                            text: "email or phone number",
+                              text: !isNumber ? "Sign up with\n" : "Login\n"),
+                          TextSpan(
+                            text: !isNumber
+                                ? "email or phone number"
+                                : "with your phone number",
                             style: TextStyle(
                               color: BlackColor,
                               fontWeight: FontWeight.normal,
@@ -58,59 +73,80 @@ class SignUp extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 20),
+                    !isNumber
+                        ? Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.email,
+                                  size: IconSize.sizeIcon,
+                                ),
+                                SizedBox(width: 10),
+                                Ndako243Text(
+                                  textAlign: TextAlign.left,
+                                  text: "nadko@exemple@exemple.com",
+                                ),
+                              ],
+                            ),
+                          )
+                        : SizedBox.shrink(),
+                    !isNumber
+                        ? Padding(
+                            padding: const EdgeInsets.only(
+                              left: 20.0,
+                              right: 20.0,
+                              top: 10.0,
+                              bottom: 10.0,
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Divider(),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 8.0, right: 8.0),
+                                  child: Text("Or"),
+                                ),
+                                Expanded(
+                                  child: Divider(),
+                                ),
+                              ],
+                            ),
+                          )
+                        : SizedBox.shrink(),
                     Padding(
                       padding: const EdgeInsets.only(left: 8.0),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.email,
-                            size: IconSize.sizeIcon,
-                          ),
-                          SizedBox(width: 10),
-                          Ndako243Text(
-                            textAlign: TextAlign.left,
-                            text: "nadko@exemple@exemple.com",
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 20.0,
-                        right: 20.0,
-                        top: 10.0,
-                        bottom: 10.0,
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Divider(),
-                          ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: Text("Or"),
-                          ),
-                          Expanded(
-                            child: Divider(),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8.0),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.phone,
-                            size: IconSize.sizeIcon,
-                          ),
-                          SizedBox(width: 10),
-                          Ndako243Text(
-                            textAlign: TextAlign.left,
-                            text: "+243 978 971 530",
-                          ),
-                        ],
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            isNumber = !isNumber;
+                          });
+                        },
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.phone,
+                              size: IconSize.sizeIcon,
+                            ),
+                            SizedBox(width: 10),
+                            Ndako243Text(
+                              textAlign: TextAlign.left,
+                              text: "+243 978 971 530",
+                            ),
+                            Spacer(),
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8.0),
+                              child: isNumber
+                                  ? Icon(
+                                      Icons.verified,
+                                      color: Colors.green,
+                                    )
+                                  : SizedBox.shrink(),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(height: 20),
