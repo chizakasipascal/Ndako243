@@ -4,3 +4,4 @@ export 'routes.dart';
 export 'strings.dart';
 export 'mediaquery.dart';
 export 'fontSize.dart';
+export 'icon_size.dart';

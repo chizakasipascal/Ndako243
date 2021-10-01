@@ -36,11 +36,11 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ZwandakoText(
+                  Ndako243Text(
                     text: 'Find The Best Place',
                     fontSize: FontSize.small,
                   ),
-                  ZwandakoText(
+                  Ndako243Text(
                     text: 'To Live Luxury Life',
                     fontWeight: FontWeight.bold,
                     fontSize: FontSize.meduim,
@@ -67,13 +67,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ZwandakoText(
+                      Ndako243Text(
                         text: 'Latest Property',
                         fontWeight: FontWeight.bold,
                         fontSize: FontSize.meduim,
                         color: BlackColor,
                       ),
-                      ZwandakoText(
+                      Ndako243Text(
                         text: 'View All',
                         fontWeight: FontWeight.normal,
                         fontSize: FontSize.small,
@@ -109,13 +109,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ZwandakoText(
+                      Ndako243Text(
                         text: 'Nearby Property',
                         fontWeight: FontWeight.bold,
                         fontSize: FontSize.meduim,
                         color: BlackColor,
                       ),
-                      ZwandakoText(
+                      Ndako243Text(
                         text: 'View All',
                         fontWeight: FontWeight.normal,
                         fontSize: FontSize.small,

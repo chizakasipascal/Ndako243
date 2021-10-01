@@ -44,12 +44,13 @@ class _IntroductionPagesState extends State<IntroductionPages> {
             left: 0,
             right: 0,
             child: Container(
-                height: 20,
-                width: 60,
-                color: Colors.green,
-                child: Placeholder(
-                  color: WhiteColor,
-                )),
+              height: 20,
+              width: 60,
+              color: Colors.green,
+              child: Placeholder(
+                color: WhiteColor,
+              ),
+            ),
           ),
         ],
       ),

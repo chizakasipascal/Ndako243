@@ -7,7 +7,7 @@ typedef void OnPressed();
 class ZwandakoAppBar extends StatefulWidget {
   final Widget? leading, actions, title;
   final OnPressed? onPressedleading, onPressedactions;
-  final ZwandakoText? zwandakoText;
+  final Ndako243Text? zwandakoText;
   const ZwandakoAppBar({
     Key? key,
     this.leading,

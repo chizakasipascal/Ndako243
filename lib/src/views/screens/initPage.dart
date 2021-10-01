@@ -12,9 +12,9 @@ class InitPage extends StatefulWidget {
 class _InitPageState extends State<InitPage> {
   @override
   void initState() {
-    // Future.delayed(Duration(seconds: 5), () {
-    //   Navigator.pushReplacementNamed(context, Routes.introductionPages);
-    // });
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.pushReplacementNamed(context, Routes.introductionPages);
+    });
 
     super.initState();
   }
@@ -31,14 +31,21 @@ class _InitPageState extends State<InitPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: size.height * .4,
-              width: size.width * .4,
+              height: size.height * .5,
+              width: size.width * .5,
               child: CircleAvatar(
                 backgroundColor: WhiteColor,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.home),
+                    Container(
+                      height: 70,
+                      width: 70,
+                      child: Placeholder(
+                        color: BlackColor,
+                      ),
+                    ),
+                    SizedBox(height: 20),
                     Text(
                       "Ndako243",
                       style: TextStyle(

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:ndako243/src/constants/constanst.dart';
 import 'package:ndako243/src/utils/colors.dart';
 
-class ZwandakoText extends StatelessWidget {
+class Ndako243Text extends StatelessWidget {
   final String? text;
   final TextAlign? textAlign;
   final Color? color;
   final FontWeight? fontWeight;
   final double? fontSize;
-  const ZwandakoText({
+  const Ndako243Text({
     Key? key,
     this.text = '',
     this.color = BlackColor,

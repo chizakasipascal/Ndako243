@@ -18,9 +18,7 @@ class IntroSliderThree extends StatelessWidget {
               Container(
                 height: size.height * .7,
                 child: Center(
-                  child: Placeholder(
-                    color: Colors.red,
-                  ),
+                  child: Image.asset(Assets.Image_test),
                 ),
               ),
               Positioned(
