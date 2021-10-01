@@ -39,7 +39,14 @@ class _InitPageState extends State<InitPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.home),
-                    Text("Ndako243"),
+                    Text(
+                      "Ndako243",
+                      style: TextStyle(
+                        color: BlackColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: FontSize.meduim,
+                      ),
+                    ),
                   ],
                 ),
               ),
