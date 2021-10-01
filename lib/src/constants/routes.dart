@@ -8,10 +8,12 @@ class Routes {
   static const homeScreen = '/homeScreens';
   static const introductionPages = 'introductionPages';
   static const signUp = 'signUp';
+  static const Otp = 'otp_verification';
   static final routes = <String, WidgetBuilder>{
     initPage: (BuildContext context) => InitPage(),
     homeScreen: (BuildContext context) => HomeScreen(),
     introductionPages: (BuildContext context) => IntroductionPages(),
-    signUp: (BuildContext contect) => SignUp()
+    signUp: (BuildContext contect) => SignUp(),
+    Otp: (BuildContext contect) => OtpVerification()
   };
 }

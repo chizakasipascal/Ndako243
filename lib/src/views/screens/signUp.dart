@@ -31,7 +31,7 @@ class _SignUpState extends State<SignUp> {
         ),
         backgroundColor: WhiteColor,
         title: Text(
-          "Sign Up",
+          !isNumber ? "Sign Up" : "Sign In",
           style: TextStyle(color: BlackColor),
         ),
         centerTitle: true,
@@ -157,9 +157,15 @@ class _SignUpState extends State<SignUp> {
                         child: MaterialButton(
                           color: Background,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: !isNumber
+                                ? BorderRadius.circular(20)
+                                : BorderRadius.circular(5),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            isNumber
+                                ? print("KKK")
+                                : Navigator.pushNamed(context, Routes.Otp);
+                          },
                           child: Ndako243Text(
                             text: "SIGN IN",
                             color: WhiteColor,
@@ -180,9 +186,12 @@ class _SignUpState extends State<SignUp> {
                 text: TextSpan(
                     style: TextStyle(color: BlackColor),
                     children: <TextSpan>[
-                      TextSpan(text: "Already aheve an account?"),
                       TextSpan(
-                        text: "sign In",
+                          text: !isNumber
+                              ? "Already aheve an account?"
+                              : "Have not account?"),
+                      TextSpan(
+                        text: "sign Up",
                         style: TextStyle(color: Colors.yellow),
                       ),
                     ]),
