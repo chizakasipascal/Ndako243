@@ -1,0 +1,1 @@
+export 'cardSlider.dart';
