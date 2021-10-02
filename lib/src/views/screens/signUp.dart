@@ -163,8 +163,8 @@ class _SignUpState extends State<SignUp> {
                           ),
                           onPressed: () {
                             isNumber
-                                ? print("KKK")
-                                : Navigator.pushNamed(context, Routes.Otp);
+                                ? Navigator.pushNamed(context, Routes.Otp)
+                                : print("KKK");
                           },
                           child: Ndako243Text(
                             text: "SIGN IN",
