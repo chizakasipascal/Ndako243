@@ -34,23 +34,6 @@ class IntroSliderTwo extends StatelessWidget {
                       Navigator.pushNamed(context, Routes.homeScreen),
                 ),
               ),
-              Positioned(
-                bottom: 2,
-                left: 0,
-                right: 0,
-                child: Container(
-                  height: 20,
-                  width: 60,
-                  color: Colors.green,
-                  child: Center(
-                    child: Container(
-                      height: 10,
-                      width: 10,
-                      color: Colors.red,
-                    ),
-                  ),
-                ),
-              ),
             ],
           ),
         ),

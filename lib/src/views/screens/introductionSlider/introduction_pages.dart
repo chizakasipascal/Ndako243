@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ndako243/src/utils/utils.dart';
 import 'package:ndako243/src/views/screens/introductionSlider/introductionSlider.dart';
 
 class IntroductionPages extends StatefulWidget {
@@ -38,19 +37,6 @@ class _IntroductionPagesState extends State<IntroductionPages> {
                 _selectedIndex = index;
               });
             },
-          ),
-          Positioned(
-            bottom: 2,
-            left: 0,
-            right: 0,
-            child: Container(
-              height: 20,
-              width: 60,
-              color: Colors.green,
-              child: Placeholder(
-                color: WhiteColor,
-              ),
-            ),
           ),
         ],
       ),
