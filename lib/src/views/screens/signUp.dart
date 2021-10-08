@@ -13,6 +13,7 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   bool isNumber = false;
+  bool isEmail = false;
 
   @override
   void initState() {
@@ -27,7 +28,8 @@ class _SignUpState extends State<SignUp> {
         leading: IconButton(
           splashRadius: 20,
           onPressed: () => Navigator.pop(context),
-          icon: Icon(Icons.arrow_back, color: BlackColor),
+          icon: Icon(Icons.arrow_back,
+              size: IconSize.sizeIcon, color: BlackColor),
         ),
         backgroundColor: WhiteColor,
         title: Text(
@@ -76,18 +78,26 @@ class _SignUpState extends State<SignUp> {
                     !isNumber
                         ? Padding(
                             padding: const EdgeInsets.only(left: 8.0),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.email,
-                                  size: IconSize.sizeIcon,
-                                ),
-                                SizedBox(width: 10),
-                                Ndako243Text(
-                                  textAlign: TextAlign.left,
-                                  text: "nadko@exemple@exemple.com",
-                                ),
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                setState(() {
+                                  Navigator.pushNamed(
+                                      context, Routes.SignIn_Welcom);
+                                });
+                              },
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.email,
+                                    size: IconSize.sizeIcon,
+                                  ),
+                                  SizedBox(width: 10),
+                                  Ndako243Text(
+                                    textAlign: TextAlign.left,
+                                    text: "nadko@exemple@exemple.com",
+                                  ),
+                                ],
+                              ),
                             ),
                           )
                         : SizedBox.shrink(),
@@ -165,7 +175,9 @@ class _SignUpState extends State<SignUp> {
                           onPressed: () {
                             isNumber
                                 ? Navigator.pushNamed(context, Routes.Otp)
-                                : print("KKK");
+                                : isEmail
+                                    ? "dd"
+                                    : "xx";
                           },
                           child: Ndako243Text(
                             text: "SIGN IN",

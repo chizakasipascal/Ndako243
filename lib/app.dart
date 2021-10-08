@@ -13,7 +13,7 @@ class Ndako243 extends StatelessWidget {
     ]);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     SystemChrome.setEnabledSystemUIOverlays([
-      // SystemUiOverlay.top,
+      SystemUiOverlay.top,
       SystemUiOverlay.bottom,
     ]);
 

@@ -32,12 +32,14 @@ Widget buildTextBox(
       labelText: label,
       labelStyle: TextStyle(
         fontSize: FontSize.small,
-        color: Colors.black,
+        fontWeight: FontWeight.bold,
+        color: BlackColor,
       ),
       hintText: hint,
       hintStyle: TextStyle(
         fontSize: FontSize.small,
-        color: Grey.withOpacity(.5),
+        fontWeight: FontWeight.bold,
+        color: BlackColor,
       ),
       prefixIcon: prefixIcon,
       suffixIcon: suffixIcon,
