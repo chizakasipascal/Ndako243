@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ndako243/src/constants/constanst.dart';
 import 'package:ndako243/src/constants/fontSize.dart';
 import 'package:ndako243/src/utils/utils.dart';
 import 'package:ndako243/src/views/compotments/compotements.dart';
@@ -87,9 +88,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       Container(
                         height: 160,
-                        child: Placeholder(),
                         decoration: BoxDecoration(
-                            color: Colors.red,
+                            image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage(Assets.Image_test),
+                            ),
                             borderRadius: BorderRadius.circular(10)),
                       ),
                       Positioned(
@@ -97,7 +100,43 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Container(
                           height: 80,
                           width: size.width * .7,
-                          child: Placeholder(),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      Ndako243Text(
+                                        text: "data",
+                                      ),
+                                      Spacer(),
+                                      Ndako243Text(
+                                        text: "data",
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Row(
+                                    children: [
+                                      Ndako243Text(
+                                        text: "data",
+                                      ),
+                                      Spacer(),
+                                      Ndako243Text(
+                                        text: "data",
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                Ndako243Text(
+                                  text: "Etoil",
+                                )
+                              ],
+                            ),
+                          ),
                           decoration: BoxDecoration(
                               color: Background,
                               borderRadius: BorderRadius.circular(10)),
@@ -146,20 +185,57 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Column(
                               children: [
                                 Container(
-                                    height: 90,
-                                    width: size.width * .5,
-                                    decoration: BoxDecoration(
-                                      color: Colors.red,
-                                      borderRadius: BorderRadius.only(
-                                          topLeft: Radius.circular(10),
-                                          topRight: Radius.circular(10)),
+                                  height: 90,
+                                  width: size.width * .5,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: AssetImage(Assets.Image_test),
                                     ),
-                                    child: Placeholder()),
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(10),
+                                      topRight: Radius.circular(10),
+                                    ),
+                                  ),
+                                ),
                                 Container(
                                   height: 35,
                                   width: size.width * .5,
-                                  color: Colors.green,
-                                  child: Placeholder(),
+                                  color: WhiteColor,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Column(
+                                      children: [
+                                        Expanded(
+                                          child: Row(
+                                            children: [
+                                              Ndako243Text(
+                                                text: "data",
+                                              ),
+                                              Spacer(),
+                                              Ndako243Text(
+                                                text: "data",
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Row(
+                                            children: [
+                                              Ndako243Text(
+                                                text: "data",
+                                              ),
+                                              Spacer(),
+                                              Ndako243Text(
+                                                text: "data",
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 )
                               ],
                             )),
