@@ -204,7 +204,7 @@ class _SignUpState extends State<SignUp> {
                               ? "Already aheve an account?"
                               : "Have not account?"),
                       TextSpan(
-                        text: "sign Up",
+                        text: "sign Up!",
                         style: TextStyle(color: Colors.yellow),
                       ),
                     ]),
