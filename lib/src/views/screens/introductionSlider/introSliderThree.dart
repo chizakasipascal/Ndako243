@@ -16,9 +16,15 @@ class IntroSliderThree extends StatelessWidget {
             children: [
               Container(
                 height: size.height * .7,
-                child: Center(
-                  child: Image.asset(Assets.Image_test),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(Assets.Image_test),
+                  ),
                 ),
+                // child: Center(
+                //   child: Image.asset(Assets.Image_test),
+                // ),
               ),
               Positioned(
                 bottom: 0,
