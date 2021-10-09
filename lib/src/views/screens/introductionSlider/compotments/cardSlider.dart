@@ -39,13 +39,13 @@ class CardSlider extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          ZwandakoText(
+          Ndako243Text(
             text: title,
             color: WhiteColor,
             fontWeight: FontWeight.bold,
             fontSize: FontSize.lard,
           ),
-          ZwandakoText(
+          Ndako243Text(
             text: subtitle,
             color: WhiteColor,
             fontSize: FontSize.small,
@@ -59,7 +59,7 @@ class CardSlider extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               onPressed: onPressed,
-              child: ZwandakoText(
+              child: Ndako243Text(
                 text: descptionButtomText,
                 color: WhiteColor,
                 fontSize: FontSize.small,

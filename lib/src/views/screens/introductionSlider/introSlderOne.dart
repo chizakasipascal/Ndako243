@@ -17,11 +17,15 @@ class IntroSliderOne extends StatelessWidget {
             children: [
               Container(
                 height: size.height * .7,
-                child: Center(
-                  child: Placeholder(
-                    color: Colors.red,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(Assets.Image_test),
                   ),
                 ),
+                // child: Center(
+                //   child: Image.asset(Assets.Image_test),
+                // ),
               ),
               Positioned(
                 bottom: 0,
@@ -35,23 +39,6 @@ class IntroSliderOne extends StatelessWidget {
                   descptionButtomText: "Get Started",
                   onPressed: () =>
                       Navigator.pushNamed(context, Routes.homeScreen),
-                ),
-              ),
-              Positioned(
-                bottom: 2,
-                left: 0,
-                right: 0,
-                child: Container(
-                  height: 20,
-                  width: 60,
-                  color: Colors.green,
-                  child: Center(
-                    child: Container(
-                      height: 10,
-                      width: 10,
-                      color: Colors.red,
-                    ),
-                  ),
                 ),
               ),
             ],
